@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Custo da Viagem</title>
+
+    <script>
+        function calcular() {
+            var distancia = Number(document.querySelector("#distancia").value);
+            var consumo = Number(document.querySelector("#consumo").value);
+            var preco = Number(document.querySelector("#preco").value);
+
+            var litros = distancia / consumo;
+            var custo = litros * preco;
+
+            document.querySelector("#resultado").innerHTML =
+                "Custo da viagem: R$ " + custo;
+        }
+    </script>
+</head>
+
+<body>
+
+    <h1>Custo de uma Viagem</h1>
+
+    <input id="distancia" type="number" placeholder="Distância">
+    <input id="consumo" type="number" placeholder="Consumo km/L">
+    <input id="preco" type="number" placeholder="Preço do combustível">
+
+    <button onclick="calcular()">Calcular</button>
+
+    <p id="resultado"></p>
+
+</body>
+</html>

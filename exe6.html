@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>IMC</title>
+
+    <script>
+        function calcular() {
+            var peso = Number(document.querySelector("#peso").value);
+            var altura = Number(document.querySelector("#altura").value);
+
+            var imc = peso / (altura * altura);
+
+            document.querySelector("#resultado").innerHTML =
+                "IMC: " + imc;
+        }
+    </script>
+</head>
+
+<body>
+
+    <h1>Cálculo do IMC</h1>
+
+    <input id="peso" type="number" placeholder="Peso em kg">
+    <input id="altura" type="number" placeholder="Altura em metros">
+
+    <button onclick="calcular()">Calcular</button>
+
+    <p id="resultado"></p>
+
+</body>
+</html>

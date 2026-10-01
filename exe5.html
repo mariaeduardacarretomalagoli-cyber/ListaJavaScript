@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Reajuste de Salário</title>
+
+    <script>
+        function calcular() {
+            var salario = Number(document.querySelector("#salario").value);
+            var porcentagem = Number(document.querySelector("#porcentagem").value);
+
+            var aumento = salario * (porcentagem / 100);
+            var novoSalario = salario + aumento;
+
+            document.querySelector("#resultado").innerHTML =
+                "Valor do aumento: R$ " + aumento + "<br>" +
+                "Novo salário: R$ " + novoSalario;
+        }
+    </script>
+</head>
+
+<body>
+
+    <h1>Reajuste de Salário</h1>
+
+    <input id="salario" type="number" placeholder="Salário atual">
+    <input id="porcentagem" type="number" placeholder="Porcentagem de aumento">
+
+    <button onclick="calcular()">Calcular</button>
+
+    <p id="resultado"></p>
+
+</body>
+</html>

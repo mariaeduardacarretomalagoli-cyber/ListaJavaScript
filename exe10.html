@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Preço por Quilograma</title>
+
+    <script>
+        function calcular() {
+            var peso = Number(document.querySelector("#peso").value);
+            var preco = Number(document.querySelector("#preco").value);
+
+            var total = peso * preco;
+
+            document.querySelector("#resultado").innerHTML =
+                "Valor total: R$ " + total;
+        }
+    </script>
+</head>
+
+<body>
+
+    <h1>Preço por Quilograma</h1>
+
+    <input id="peso" type="number" placeholder="Peso em kg">
+    <input id="preco" type="number" placeholder="Preço por kg">
+
+    <button onclick="calcular()">Calcular</button>
+
+    <p id="resultado"></p>
+
+</body>
+</html>

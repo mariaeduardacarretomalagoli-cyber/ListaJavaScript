@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Valor por Pessoa</title>
+
+    <script>
+        function calcular() {
+            var valor = Number(document.querySelector("#valor").value);
+            var pessoas = Number(document.querySelector("#pessoas").value);
+
+            var valorPessoa = valor / pessoas;
+
+            document.querySelector("#resultado").innerHTML =
+                "Cada pessoa deverá pagar: R$ " + valorPessoa;
+        }
+    </script>
+</head>
+
+<body>
+
+    <h1>Valor por Pessoa</h1>
+
+    <input id="valor" type="number" placeholder="Valor total">
+    <input id="pessoas" type="number" placeholder="Quantidade de pessoas">
+
+    <button onclick="calcular()">Calcular</button>
+
+    <p id="resultado"></p>
+
+</body>
+</html>

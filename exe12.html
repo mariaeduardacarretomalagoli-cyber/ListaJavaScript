@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Velocidade Média</title>
+
+    <script>
+        function calcular() {
+            var distancia = Number(document.querySelector("#distancia").value);
+            var tempo = Number(document.querySelector("#tempo").value);
+
+            var velocidade = distancia / tempo;
+
+            document.querySelector("#resultado").innerHTML =
+                "Velocidade média: " + velocidade + " km/h";
+        }
+    </script>
+</head>
+
+<body>
+
+    <h1>Velocidade Média</h1>
+
+    <input id="distancia" type="number" placeholder="Distância em km">
+    <input id="tempo" type="number" placeholder="Tempo em horas">
+
+    <button onclick="calcular()">Calcular</button>
+
+    <p id="resultado"></p>
+
+</body>
+</html>

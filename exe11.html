@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Comissão de Vendas</title>
+
+    <script>
+        function calcular() {
+            var vendas = Number(document.querySelector("#vendas").value);
+            var porcentagem = Number(document.querySelector("#porcentagem").value);
+
+            var comissao = vendas * (porcentagem / 100);
+            var total = vendas + comissao;
+
+            document.querySelector("#resultado").innerHTML =
+                "Comissão: R$ " + comissao + "<br>" +
+                "Total recebido: R$ " + total;
+        }
+    </script>
+</head>
+
+<body>
+
+    <h1>Comissão de Vendas</h1>
+
+    <input id="vendas" type="number" placeholder="Total vendido">
+    <input id="porcentagem" type="number" placeholder="Porcentagem de comissão">
+
+    <button onclick="calcular()">Calcular</button>
+
+    <p id="resultado"></p>
+
+</body>
+</html>

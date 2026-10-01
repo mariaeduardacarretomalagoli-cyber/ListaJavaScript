@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cálculo de Troco</title>
+
+    <script>
+        function calcular() {
+            var compra = Number(document.querySelector("#compra").value);
+            var pagamento = Number(document.querySelector("#pagamento").value);
+
+            var troco = pagamento - compra;
+
+            document.querySelector("#resultado").innerHTML =
+                "Troco: R$ " + troco;
+        }
+    </script>
+</head>
+
+<body>
+
+    <h1>Cálculo de Troco</h1>
+
+    <input id="compra" type="number" placeholder="Valor da compra">
+    <input id="pagamento" type="number" placeholder="Valor pago">
+
+    <button onclick="calcular()">Calcular</button>
+
+    <p id="resultado"></p>
+
+</body>
+</html>

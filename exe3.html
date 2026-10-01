@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Consumo de Combustível</title>
+
+    <script>
+        function calcular() {
+            var distancia = Number(document.querySelector("#distancia").value);
+            var combustivel = Number(document.querySelector("#combustivel").value);
+
+            var consumo = distancia / combustivel;
+
+            document.querySelector("#resultado").innerHTML =
+                "Consumo médio: " + consumo + " km/L";
+        }
+    </script>
+</head>
+
+<body>
+
+    <h1>Consumo de Combustível</h1>
+
+    <input id="distancia" type="number" placeholder="Distância em km">
+    <input id="combustivel" type="number" placeholder="Combustível em litros">
+
+    <button onclick="calcular()">Calcular</button>
+
+    <p id="resultado"></p>
+
+</body>
+</html>

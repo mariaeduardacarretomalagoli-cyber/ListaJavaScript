@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Pontuação do Jogo</title>
+
+    <script>
+        function calcular() {
+            var vitorias = Number(document.querySelector("#vitorias").value);
+            var empates = Number(document.querySelector("#empates").value);
+            var derrotas = Number(document.querySelector("#derrotas").value);
+
+            var pontos = (vitorias * 3) + (empates * 1) + (derrotas * 0);
+
+            document.querySelector("#resultado").innerHTML =
+                "Pontuação total: " + pontos;
+        }
+    </script>
+</head>
+
+<body>
+
+    <h1>Pontuação de um Jogo</h1>
+
+    <input id="vitorias" type="number" placeholder="Vitórias">
+    <input id="empates" type="number" placeholder="Empates">
+    <input id="derrotas" type="number" placeholder="Derrotas">
+
+    <button onclick="calcular()">Calcular</button>
+
+    <p id="resultado"></p>
+
+</body>
+</html>

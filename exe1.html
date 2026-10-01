@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Área do Retângulo</title>
+
+    <script>
+        function calcular() {
+            var largura = Number(document.querySelector("#largura").value);
+            var altura = Number(document.querySelector("#altura").value);
+
+            var area = largura * altura;
+
+            document.querySelector("#resultado").innerHTML = "Área: " + area;
+        }
+    </script>
+</head>
+
+<body>
+
+    <h1>Área de um Retângulo</h1>
+
+    <input id="largura" type="number" placeholder="Largura">
+    <input id="altura" type="number" placeholder="Altura">
+
+    <button onclick="calcular()">Calcular</button>
+
+    <p id="resultado"></p>
+
+</body>
+</html>
